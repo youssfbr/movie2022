@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function Form() {
@@ -18,7 +19,7 @@ function Form() {
                 <form className="movie-form">
                     <div className="form-group movie-form-group">
                         <label htmlFor="email">Informe seu email</label>
-                        <input type="email" className="form-control" id="email" />
+                        <input type="email" className="form-control" id="email" placeholder="e-mail@email.com" />
                     </div>
                     <div className="form-group movie-form-group">
                         <label htmlFor="score">Informe sua avaliação</label>
@@ -35,7 +36,9 @@ function Form() {
                         <button type="submit" className="btn btn-primary movie-btn">Salvar</button>
                     </div>
                 </form >
-                <button className="btn btn-primary movie-btn mt-3">Cancelar</button>
+                <Link to="/">
+                    <button className="btn btn-primary movie-btn mt-3">Cancelar</button>
+                </Link>
             </div >
         </div >
     )
