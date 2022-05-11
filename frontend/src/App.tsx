@@ -13,13 +13,15 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Listing />} />
-        <Route path="/form">
-          <Route path=":movieId" element={<Form />} />
-        </Route>
-      </Routes>
-      <Footer />
+      <div className="main-container">
+        <Routes>
+          <Route path="/" element={<Listing />} />
+          <Route path="/form">
+            <Route path=":movieId" element={<Form />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

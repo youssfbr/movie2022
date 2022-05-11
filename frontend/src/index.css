@@ -24,3 +24,10 @@ a, a:hover {
   text-decoration: none;
   color: unset;
 }
+
+.main-container {
+  padding: 60px 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
