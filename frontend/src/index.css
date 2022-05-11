@@ -2,20 +2,22 @@
 
 :root {
   --color-primary: #4D41C0;
+  --white: #fff;
+  --bg-gray: #ddd;
+  --text-gray: #4a4a4a;
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;    
 }
 
 html, body {
-    background-color: #e8e8e8; /* E5E5E5; */
+    background-color: var(--bg-gray);      
 }
 
 a, a:hover {
