@@ -6,7 +6,7 @@ header {
 }
 
 .movie-nav-content {
-    color: #fff;
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;

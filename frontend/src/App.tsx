@@ -1,8 +1,12 @@
+import Footer from "shared/components/Footer";
 import Navbar from "./shared/components/Navbar";
 
 function App() {
   return (
-    <Navbar />    
+    <div>
+      <Navbar /> 
+      <Footer />   
+    </div>
   );
 }
 
