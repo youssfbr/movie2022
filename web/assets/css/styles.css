@@ -106,3 +106,10 @@ a, a:hover {
 
     border-radius: 4px;
 }
+
+/* Formulário */
+
+.movie-form-container {
+    padding: 40px 0;
+    max-width: 480px;
+}
