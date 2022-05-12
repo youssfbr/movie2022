@@ -6,6 +6,8 @@ import com.github.youssfbr.movie.services.interfaces.IScoreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/v1/scores")
 @RequiredArgsConstructor
@@ -14,7 +16,7 @@ public class ScoreController {
     private final IScoreService scoreService;
 
     @PutMapping
-    public MovieDTO saveScore(@RequestBody ScoreDTO scoreDTO) {
+    public MovieDTO saveScore(@RequestBody @Valid ScoreDTO scoreDTO) {
         return scoreService.saveScore(scoreDTO);
     }
 
