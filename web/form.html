@@ -35,9 +35,29 @@
                 src="https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg"
                 alt="The Witcher pic"
               />
-              <div class="movie-card-description">
+              <div class="movie-form-description">
                 <h3>The Witcher</h3>
-                <a class="movie-btn" href="index.html">Cancelar</a>
+                <form class="movie-form">
+                    <div class="form-group movie-form-group">
+                        <label for="email">Informe seu email</label>
+                        <input class="form-control" type="email" id="email" />
+                    </div>
+                    <div class="form-group movie-form-group">
+                        <label for="score">Informe sua avaliacao</label>
+                        <select class="form-control" name="score" id="score">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="movie-form-btn-container">
+                        <button class="movie-btn" type="submit">Salvar</button>
+                        <a class="movie-btn" href="index.html">Cancelar</a>
+                    </div>
+                </form>
+
               </div>
             </div>
           </div>
