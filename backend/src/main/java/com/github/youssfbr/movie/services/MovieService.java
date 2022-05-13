@@ -18,7 +18,7 @@ public class MovieService implements IMovieService {
 
     private final IMovieRepository movieRepository;
     private static final IMovieMapper movieMapper = IMovieMapper.INSTANCE;
-    private static final String MESSAGE_ID = "Recurso não encontrado. Id: ";
+    private static final String MESSAGE_ID = "Filme não encontrado. Id: ";
 
     @Override
     @Transactional(readOnly = true)
