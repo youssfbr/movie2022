@@ -61,7 +61,7 @@ a, a:hover {
 }
 
 #movie-card-list {
-    padding: 40px 0;
+    padding: 20px 10px 0 10px;
 }
 
 .movie-card {
@@ -74,10 +74,10 @@ a, a:hover {
 }
 
 .movie-card-description {
-    padding: 10px 20px 20px 20px;
+    padding: 15px 20px 20px 20px;
     border-radius: 0 0 8px 8px;
-    background-color: var(--white);
-    height: 198px;
+    background-color: var(--white);    
+    height: 202px;
 
     display: flex;
     flex-direction: column;
@@ -87,13 +87,11 @@ a, a:hover {
 
 .movie-card-description h3 {
     font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 25px;
+    font-weight: 700;    
     text-align: center;
 }
 
-.movie-card-description-bottom {   
-    
+.movie-card-description-bottom {    
     display: flex;
     flex-direction: column;
     align-items: center;
