@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios, { AxiosRequestConfig } from 'axios';
 import { Movie } from 'shared/types/movie';
 import { BASE_URL } from 'shared/utils/requests';
+import { validateEmail } from 'shared/utils/validate';
 import './styles.css';
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
 
 function FormCard({ movieId }: Props) {  
 
+    const navigate = useNavigate();
     const [movie, setMovie] = useState<Movie>();
 
     useEffect(() => {
@@ -20,12 +22,39 @@ function FormCard({ movieId }: Props) {
             })
     }, [movieId]);
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+
+        event.preventDefault();
+
+        const email = (event.target as any).email.value;
+        const score = (event.target as any).score.value;      
+
+        if (!validateEmail(email)) {
+            return;
+        }
+
+        const config: AxiosRequestConfig = {
+            baseURL: BASE_URL,
+            method: 'PUT',
+            url: '/scores',
+            data: {
+                email: email,
+                movieId: movieId,
+                score: score
+            }
+        }
+
+        axios(config).then(response => {            
+            navigate("/");           
+        })        
+    }
+
     return (
         <div className="movie-form-container">
             <img className="movie-movie-card-image" src={movie?.image} alt={movie?.title} />
             <div className="movie-card-bottom-container">
                 <h3>{movie?.title}</h3>
-                <form className="movie-form">
+                <form className="movie-form" onSubmit={handleSubmit}>
                     <div className="form-group movie-form-group">
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" placeholder="e-mail@email.com" />
