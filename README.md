@@ -22,4 +22,5 @@
 <br>
 
 [Para ver o projeto desenvolvido em Angular](https://youssf-movie-ng.netlify.app)
+<br>
 [Para ver o projeto desenvolvido em ReactJS](https://youssf-movie.netlify.app/)
