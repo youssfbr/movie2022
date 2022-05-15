@@ -61,7 +61,7 @@ a, a:hover {
 }
 
 #movie-card-list {
-    padding: 20px 10px 0 10px;
+    padding: 0 10px;
 }
 
 .movie-card {
@@ -135,11 +135,56 @@ a, a:hover {
     border: 0;
 }
 
+.movie-pagination-container {
+    padding: 15px 0;
+    display: flex;    
+    justify-content: center;
+}
+
+.movie-pagination-box {    
+    width: 180px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-pagination-box p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.movie-pagination-box button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;      
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.movie-pagination-box img {
+    filter: brightness(0) invert(22%) sepia(29%) saturate(5247%) hue-rotate(235deg) contrast(89%);    
+}
+
+.movie-pagination-box button:disabled {    
+    border: 1px solid var(--text-light-gray);    
+}
+
+.movie-pagination-box button:disabled img {
+    filter: unset;
+}
+
+.movie-flip-horizontal {
+    transform: rotate(180deg);
+}
+
 /* Formulário */
 
 .movie-form-container {
     padding: 40px 0;
     max-width: 480px;
+    font-weight: 400;
 }
 
 .movie-form-description {
