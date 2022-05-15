@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     CorsConfigurationSource corsConfigurationSource() {
 
         CorsConfiguration configuration = new CorsConfiguration().applyPermitDefaultValues();
-        configuration.setAllowedOrigins(Arrays.asList("https://youssf-movie.netlify.app","http://localhost:3000","http://localhost:4200"));
+        configuration.setAllowedOrigins(Arrays.asList("https://youssf-movie-ng.netlify.app", "https://youssf-movie.netlify.app","http://localhost:3000","http://localhost:4200"));
         configuration.setAllowedMethods(Arrays.asList("POST", "GET", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowCredentials(true);
 
