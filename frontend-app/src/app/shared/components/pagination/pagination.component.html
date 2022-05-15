@@ -1,0 +1,27 @@
+<div class="movie-pagination-container">
+    <div class="movie-pagination-box">
+
+        <button class="movie-pagination-button" 
+            [disabled]="page.first"
+            (click)="changePage(-1)"
+        >
+            <img src="@app/../assets/img/arrow.svg" 
+                alt="arrow left"
+            />        
+        </button>
+
+        <p>{{page.number + 1}} de {{page.totalPages}}</p>
+
+        <button 
+            class="movie-pagination-button" 
+            [disabled]="page.last"
+            (click)="changePage(1)"
+        >        
+        <img 
+            class="movie-flip-horizontal" 
+            src="@app/../assets/img/arrow.svg" 
+            alt="arrow right"
+        />
+        </button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<app-pagination [page]="moviePage" (status)="changePage($event)"></app-pagination>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-lg-4 col-xl-3 mb-3" *ngFor="let movie of movies">
+            <app-movie-card  [movie]="movie"></app-movie-card>
+        </div>      
+    </div>
+</div>
+
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white;">Carregando ...</p>
+</ngx-spinner>

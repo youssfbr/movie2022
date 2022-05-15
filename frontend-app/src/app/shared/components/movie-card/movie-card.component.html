@@ -1,0 +1,13 @@
+<div>
+    <img class="movie-movie-card-image"src="{{movie.image}}" alt="{{movie.image}}">
+    <div class="movie-card-bottom-container">
+        <h3>{{movie.title}}</h3>
+        
+        <app-movie-score 
+            [count]="movie.count"
+            [score]="movie.score">
+        </app-movie-score>        
+
+        <div class="btn btn-primary movie-btn" (click)="avaliar(movie.id)">Avaliar</div>
+    </div>
+</div>

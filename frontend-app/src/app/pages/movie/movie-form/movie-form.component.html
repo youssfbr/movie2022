@@ -1,0 +1,68 @@
+<div class="movie-form-container">
+    <img class="movie-movie-card-image" src={{movie.image}} alt={{movie.title}} />
+    <div class="movie-card-bottom-container">
+        <h3>{{movie.title}}</h3>
+
+        <form class="movie-form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+            
+            <div class="form-group movie-form-group">
+                <label for="email">Informe seu email</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    formControlName="email"
+                    tooltip="Informe seu e-mail"
+                    placeholder="e-mail@email.com"
+                    [ngClass]="{ 'is-invalid': displayMessage.email }"
+                />
+                <div class="invalid-feedback movie-form-msg-error" >{{ displayMessage.email }}</div>
+            </div>
+            <div class="form-group movie-form-group">
+                <label for="score">Informe sua avaliação</label>
+                <select class="form-select" 
+                    id="score" 
+                    formControlName="score"
+                    tooltip="Selecione uma nota"
+                    [ngClass]="{ 'is-invalid': displayMessage.score }"
+                >
+                    <option selected>Selecione uma nota</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback movie-form-msg-error" >{{ displayMessage.score }}</div>
+            </div>
+            <div class="movie-form-btn-container">
+                <button 
+                    type="submit" 
+                    class="btn btn-primary movie-btn" 
+                    [disabled]="!form.valid"
+                    tooltip="Registro"
+                    >
+                    Salvar
+                </button>
+            </div>
+        </form >
+        <button 
+            type="button" 
+            class="btn btn-primary movie-btn mt-3" 
+            [routerLink]="['/']"
+            tooltip="Volta para listagem de filmes"
+            placement="bottom"            
+            >
+            Cancelar
+        </button>
+    </div >
+</div >
+
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white;">Carregando ...</p>
+</ngx-spinner>
